@@ -123,7 +123,7 @@ public class ViewsBuku extends Fragment{
         getActivity().setTitle("Data Buku");
         /*Buat tampilan untuk adapter jika potrait menampilkan 2 data dalam 1 baris,
         sedangakan untuk landscape 4 data dalam 1 baris*/
-        orientation = getActivity().getResources().getConfiguration().orientation;
+        orientation = view.getContext().getResources().getConfiguration().orientation;
         listBuku = new ArrayList<Buku>();
         recyclerView = view.findViewById(R.id.recycler_view);
         adapter = new AdapterBuku(view.getContext(), listBuku, new AdapterBuku.deleteItemListener() {
